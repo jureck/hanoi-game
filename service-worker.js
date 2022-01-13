@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/hanoi-game/precache-manifest.63e49e03764d1d6cf64c136844ba38f7.js"
+  "/hanoi-game/precache-manifest.c09ee83589cc8298efe1c23888363618.js"
 );
 
 self.addEventListener('message', (event) => {
