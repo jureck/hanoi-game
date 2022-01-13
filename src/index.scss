@@ -1,0 +1,543 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Fira Code', monospace;
+  background-color: #fdfdfd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid {
+  left: 12.5%;
+  right: auto;
+  position: absolute;
+  bottom: 0;
+  height: 90%;
+  width: 77.5%;
+}
+
+.container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.towerArea {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 93%;
+  justify-content: flex-end;
+  align-items: center;
+  width: 28%;
+
+  &:nth-child(1) {
+    left: 8%;
+  }
+
+  &:nth-child(2) {
+    left: 36%;
+  }
+
+  &:nth-child(3) {
+    right: 8%;
+  }
+}
+
+.ring {
+  height: 10%;
+  min-height: 28px;
+  border-radius: 2vw;
+  text-align: center;
+  z-index: 10;
+  user-select: none;
+
+  &#ring-0 {
+    background-color: rgb(88, 148, 184);
+    width: 20%;
+  }
+  &#ring-1 {
+    background-color: rgb(88, 184, 147);
+    width: 30%;
+  }
+  &#ring-2 {
+    background-color: rgb(206, 223, 56);
+    width: 40%;
+  }
+  &#ring-3 {
+    background-color: rgb(238, 181, 26);
+    width: 50%;
+  }
+  &#ring-4 {
+    background-color: rgb(88, 90, 184);
+    width: 60%;
+  }
+  &#ring-5 {
+    background-color: rgb(218, 69, 69);
+    width: 70%;
+  }
+  &#ring-6 {
+    background-color: rgb(184, 88, 184);
+    width: 80%;
+  }
+  &#ring-7 {
+    background-color: rgb(65, 104, 67);
+    width: 90%;
+  }
+}
+
+.stick {
+  background-color: #D7D7D7;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  width: 30px;
+  border-radius: 50px 50px 0px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+
+  @media (max-width: 950px) {
+    width: 16px;
+  }
+}
+
+.stick:nth-child(1) {
+  left: calc(22% - 15px);
+
+  @media (max-width: 950px) {
+    left: calc(22% - 8px);
+  }
+}
+
+.stick:nth-child(2) {
+  left: calc(50% - 15px);
+
+  @media (max-width: 950px) {
+    left: calc(50% - 8px);
+  }
+}
+
+.stick:nth-child(3) {
+  right: calc(22% - 15px);
+
+  @media (max-width: 950px) {
+    right: calc(22% - 8px);
+  }
+}
+
+
+.game__board {
+  display: flex;
+  flex-direction: column;
+  height: 60%;
+  width: 100%;
+  margin: 20px auto;
+  position: relative;
+
+  @media (max-width: 950px) {
+    margin-bottom: 10px;
+    margin-top: 0;
+    height: 80%;
+  }
+}
+
+.stick__container {
+  height: 93%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  position: absolute;
+}
+
+.base {
+  width: 90%;
+  height: 7%;
+  background-color: #D7D7D7;
+  border-radius: 100px;
+  position: absolute;
+  bottom: 0;
+  left: 5%;
+
+}
+
+.moves {
+  user-select: none;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  text-align: center;
+  margin-top: 50px;
+
+  @media (max-width: 950px) {
+    margin-top: 0px;
+  }
+
+  &__amount {
+    font-size: 35px;
+    font-weight: 900;
+
+    @media (max-width: 950px) {
+      font-size: 20px;
+    }
+  
+  }
+
+  &__complete {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #A0A0A0;
+
+    @media (max-width: 950px) {
+      font-size: 16px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+    }
+
+    @media (max-width: 400px) {
+      font-size: 15px;
+      margin-top: 5px;
+    }
+  }
+}
+
+.topbar {
+  height: 10%;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.rings {
+  &__label {
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+
+    @media (max-width: 1000px) {
+      font-size: 14px;
+    }
+  }
+
+  &__amount {
+    margin-left: 20px;
+    padding-left: 20px;
+    height: 45px;
+    width: 75px;
+    font-size: 19px;
+    background-color: #4f7497;
+    border: 0;
+    font-weight: bold;
+    border-radius: 3px;
+    color: white;
+
+    @media (max-width: 1000px) {
+      font-size: 16px;
+      height: 25px;
+      width: 55px;
+    }
+  }
+}
+
+.settings {
+  &__modal {
+    background-color: white;
+    width: 60%;
+    height: 30vh;
+    min-height: 150px;
+    position: fixed;
+    border-radius: 2vw;
+    border: 8px solid gray;
+    z-index: 20;
+    top: 200%;
+    left: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    transition: all .3s ease-in-out;
+
+    @media (max-width: 1000px) {
+      height: 50vh;
+    }
+
+    &.visible {
+      top: 20%;
+    }
+  }
+  
+  &__apply {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    font-size: 21px;
+    margin-top: 80px;
+    cursor: pointer;
+    background-color: #4f7497;
+    padding: 20px;
+    border-radius: 4px;
+
+    @media (max-width: 1000px) {
+      margin-top: 50px;
+    }
+  }
+
+  &-icon {
+    height: 50%;
+    padding: 30px;
+    cursor: pointer;
+
+    @media (max-width: 900px) {
+      padding: 15px;
+      height: 70%;
+    }
+  }
+}
+
+.end__board {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 200%;
+  left: 0;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 30;
+  transition: all .4s ease-in-out;
+
+  &.completed {
+    top: 0;
+  }
+}
+
+.congrats {
+  &__text-top {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #878787;
+    font-weight: bold;
+
+    @media (max-width: 900px) {
+      font-size: 17px;
+    }
+  }
+
+  &__moves {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 15px;
+
+    @media (max-width: 900px) {
+      font-size: 25px;
+    }
+  }
+
+  &__text-bottom {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 25px;
+    color: #878787;
+    font-weight: bold;
+    margin-top: 5px;
+
+    @media (max-width: 900px) {
+      margin-bottom: 0;
+      font-size: 18px;
+    }
+  }
+
+  &__controls {
+    margin-top: 100px;
+
+    @media (max-width: 900px) {
+      margin-top: 0;
+    }
+  }
+}
+
+.return, .restart {
+  text-transform: uppercase;
+  font-family: 'Fira Code';
+  font-size: 21px;
+  font-weight: bold;
+  color: white;
+  background-color: #4f7497;
+  border: 0;
+  border-radius: 5px;
+  width: 240px;
+  height: 70px;
+  margin: 50px;
+  cursor: pointer;
+  transition: all .1s ease-in-out;
+
+  &:hover {
+    background-color: #284158;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 16px;
+    width: 200px;
+    height: 60px;
+  }
+}
+
+.title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 45px;
+  font-weight: bold;
+
+  @media (max-width: 900px) {
+    font-size: 25px;
+  }
+}
+
+.header {
+  text-transform: uppercase;
+  text-align: center;
+  background-color: #E5E782;
+  font-weight: bold;
+  font-size: 35px;
+  padding: 25px;
+  width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 20px;
+  margin: 105px auto 5px auto;
+
+  @media (max-width: 900px) {
+    font-size: 15px;
+    padding: 10px;
+    margin-top: 10px;
+    width: 250px;
+  }
+}
+
+.rule-first {
+  text-align: center;
+  background-color: #7399AF;
+  padding: 25px;
+  font-size: 30px;
+  color: white;
+  margin: 8px;
+  border-radius: 20px;
+  width: 600px;
+  min-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 900px) {
+    font-size: 15px;
+    padding: 10px;
+    width: 320px;
+    min-width: 320px;
+  }
+}
+
+.rule-second {
+  padding: 25px;
+  text-align: center;
+  background-color: #54CB75;
+  font-size: 30px;
+  color: white;
+  margin: 8px;
+  border-radius: 20px;
+  width: 710px;
+  min-width: 710px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (max-width: 900px) {
+    font-size: 15px;
+    padding: 10px;
+    width: 380px;
+    min-width: 380px;
+  }
+}
+
+.rule-third {
+  padding: 25px;
+  text-align: center;
+  background-color: #F46C6C;
+  font-size: 30px;
+  color: white;
+  margin: 8px;
+  border-radius: 20px;
+
+  @media (max-width: 900px) {
+    font-size: 15px;
+    padding: 10px;
+    width: 450px;
+    min-width: 450px;
+  }
+}
+
+.start {
+  font-size: 30px;
+  font-family: 'Fira Code';
+  border: 0;
+  border-radius: 5px;
+  color: white;
+  background-color: #000000;
+  display: block;
+  width: 350px;
+  height: 70px;
+  margin-top: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  cursor: pointer;
+  transition: all .2s ease-in-out;
+
+  &:hover {
+    background-color: rgb(77, 77, 77);
+  }
+
+  @media (max-width: 900px) {
+    font-size: 15px;
+    width: 250px;
+    height: 60px;
+    margin-top: 30px;
+  }
+}
+
+a {
+  display: block;
+  text-decoration: none;
+  color: white;
+  width: 100%;
+  height: 100%;
+  line-height: 65px;
+
+  @media (max-width: 900px) {
+    line-height: 55px;
+  }
+}
+
+.rotate {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  z-index: 40;
+  background-color: white;
+  top: 200%;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  &__info {
+    font-size: 25px;
+    font-weight: bold;
+  }
+}
