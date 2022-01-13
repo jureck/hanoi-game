@@ -241,7 +241,7 @@ const Game = () => {
                 <p onClick={restartGame} className="settings__apply">APPLY</p>
             </section>
 
-            <section className={`end__board ${ isCompleted ? "visible" : "" }`}>
+            <section className={`end__board ${ isCompleted ? "completed" : "" }`}>
                 <section className="congrats">
                     <p className="congrats__text-top">congratulations, you have completed the tower of hanoi in</p>
                     <p className="congrats__moves">{moves}</p>
