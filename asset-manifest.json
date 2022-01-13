@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/hanoi-game/static/css/main.5a2905b2.chunk.css",
-    "main.js": "/hanoi-game/static/js/main.3398d3c2.chunk.js",
-    "main.js.map": "/hanoi-game/static/js/main.3398d3c2.chunk.js.map",
+    "main.js": "/hanoi-game/static/js/main.48ae49b3.chunk.js",
+    "main.js.map": "/hanoi-game/static/js/main.48ae49b3.chunk.js.map",
     "runtime-main.js": "/hanoi-game/static/js/runtime-main.7596f814.js",
     "runtime-main.js.map": "/hanoi-game/static/js/runtime-main.7596f814.js.map",
     "static/js/2.f51bc85e.chunk.js": "/hanoi-game/static/js/2.f51bc85e.chunk.js",
     "static/js/2.f51bc85e.chunk.js.map": "/hanoi-game/static/js/2.f51bc85e.chunk.js.map",
     "index.html": "/hanoi-game/index.html",
-    "precache-manifest.c09ee83589cc8298efe1c23888363618.js": "/hanoi-game/precache-manifest.c09ee83589cc8298efe1c23888363618.js",
+    "precache-manifest.f7b818db1c905f9b7a9fc2d27d0f44ca.js": "/hanoi-game/precache-manifest.f7b818db1c905f9b7a9fc2d27d0f44ca.js",
     "service-worker.js": "/hanoi-game/service-worker.js",
     "static/css/main.5a2905b2.chunk.css.map": "/hanoi-game/static/css/main.5a2905b2.chunk.css.map",
     "static/js/2.f51bc85e.chunk.js.LICENSE.txt": "/hanoi-game/static/js/2.f51bc85e.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.7596f814.js",
     "static/js/2.f51bc85e.chunk.js",
     "static/css/main.5a2905b2.chunk.css",
-    "static/js/main.3398d3c2.chunk.js"
+    "static/js/main.48ae49b3.chunk.js"
   ]
 }

@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "c43153629ec2ad49217f87e8bae60b82",
+    "revision": "151949b23c9897e8276e130d226b0864",
     "url": "/hanoi-game/index.html"
   },
   {
-    "revision": "611f15f3d2ec4fc5ccb9",
+    "revision": "b264a567d9f972485569",
     "url": "/hanoi-game/static/css/main.5a2905b2.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/hanoi-game/static/js/2.f51bc85e.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "611f15f3d2ec4fc5ccb9",
-    "url": "/hanoi-game/static/js/main.3398d3c2.chunk.js"
+    "revision": "b264a567d9f972485569",
+    "url": "/hanoi-game/static/js/main.48ae49b3.chunk.js"
   },
   {
     "revision": "3200a8ef350e84535d5a",
